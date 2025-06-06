@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini VTOP</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body onload="initVTOP()">
+  <div id="loginPage">
+    <h2>Login via Phone</h2>
+    <input type="text" id="phoneNumber" placeholder="+91XXXXXXXXXX"><br>
+    <div id="recaptcha-container"></div>
+    <button onclick="sendOTP()">Send OTP</button>
+    <div id="otpBox" style="display:none;">
+      <input type="text" id="otp" placeholder="Enter OTP"><br>
+      <button onclick="verifyOTP()">Verify & Login</button>
+    </div>
+  </div>
+  <div id="mainUI" style="display:none;">
+    <nav class="navbar">
+      <div class="logo">Mini VTOP</div>
+      <div class="actions">
+        <button onclick="loadPage('home')">Home</button>
+        <button onclick="toggleDarkMode()">🌓</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </nav>
+    <div class="container">
+      <aside class="sidebar">
+        <ul></ul>
+        <div id="countdown">Session: 10:00</div>
+      </aside>
+      <main id="contentArea"><h2>Welcome</h2></main>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

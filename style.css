@@ -1,0 +1,7 @@
+
+body { font-family: Arial; margin: 0; background: #fff; color: #000; }
+.dark-mode { background: #121212; color: #ddd; }
+.navbar { background: #2d2d7b; color: white; display: flex; justify-content: space-between; padding: 10px; }
+.sidebar { width: 200px; background: #eee; padding: 10px; }
+.sidebar li { list-style: none; margin: 10px 0; cursor: pointer; background: #fff; padding: 8px; }
+#loginPage { text-align: center; margin-top: 100px; }
